@@ -3,17 +3,27 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
-    name: 'Home',
     redirect: '/home'
-  },
-  {
+  }, { //首页
     path: '/home',
     name: 'home',
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
-  }
+    component: () => import(/* webpackChunkName: "home" */ '../views/home/Home.vue')
+  }, { //详情
+    path: '/detail',
+    name: 'detail',
+    component: () => import(/* webpackChunkName: "home" */ '../views/home/Detail.vue')
+  }, { //收藏
+    path: '/collect',
+    name: 'collect',
+    component: () => import(/* webpackChunkName: "collect" */ '../views/Collect.vue')
+  }, { //收藏
+    path: '/about',
+    name: 'about',
+    component: () => import(/* webpackChunkName: "home" */ '../views/about/About.vue')
+  },
 ]
 
 const router = new VueRouter({

@@ -354,8 +354,11 @@ div, p, a,img,ul,li,form,label,table,tr,td,footer,header,nav,section,input{
     border: 0;
     vertical-align: baseline;
 }
-
+ul{
+    list-style: none;
+}
 html, body {
   font-family: 'PingFang SC','STHeitiSC-Light','Helvetica-Light',Arial,sans-serif;
   height: 100%;
+  background: #fafafa;
 }
